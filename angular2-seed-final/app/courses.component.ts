@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import { CourseService } from "./course.service";
-
+ 
 @Component({
     selector: 'courses',
     template: `
@@ -9,7 +9,7 @@ import { CourseService } from "./course.service";
         <input type="text" autoGrow />
         <ul>
             <li *ngFor="let course of courses">
-                {{course}}
+                {{ course }}
             </li>
         </ul>        
     `

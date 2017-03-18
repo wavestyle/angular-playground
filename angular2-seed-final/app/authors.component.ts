@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import { AuthorService } from "./author.service";
 
-
 @Component({
     selector: 'authors',
     template: `
@@ -9,7 +8,7 @@ import { AuthorService } from "./author.service";
         {{title}}
         <ul>
             <li *ngFor="let author of authors">
-                {{author}}
+                {{ author }}
             </li>
         </ul> 
     `

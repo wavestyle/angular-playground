@@ -21,7 +21,7 @@ var AuthorsComponent = (function () {
 AuthorsComponent = __decorate([
     core_1.Component({
         selector: 'authors',
-        template: "\n        <h2>Authors</h2>\n        {{title}}\n        <ul>\n            <li *ngFor=\"let author of authors\">\n                {{author}}\n            </li>\n        </ul> \n    "
+        template: "\n        <h2>Authors</h2>\n        {{title}}\n        <ul>\n            <li *ngFor=\"let author of authors\">\n                {{ author }}\n            </li>\n        </ul> \n    "
     }),
     __metadata("design:paramtypes", [author_service_1.AuthorService])
 ], AuthorsComponent);
