@@ -1,5 +1,5 @@
-import { Component } from 'angular2/core';
-import { AuthorService } from "./author.service";
+import {Component} from 'angular2/core';
+import {AuthorService} from "./author.service";
 
 @Component({
     selector: 'authors',
