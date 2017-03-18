@@ -11,13 +11,14 @@ import { AuthorService } from "./author.service";
             {{author}}
         </li>
     </ul> 
-    `
+    `,
+    providers: [AuthorService]
 })
 
 export class AuthorsComponent {
     title = "The title of the authors page";
     authors;
-    constructor(){
-        this.authors = new AuthorService().getAuthors(); 
+    constructor(authorService: AuthorService){
+        this.authors = authorService.getAuthors(); 
     }
 }
