@@ -12,17 +12,19 @@ import {CourseService} from "./course.service";
                 {{course}}
             </li>
         </ul>        
-    `
+    `,
+    providers: [CourseService]
 })
 export class CoursesComponent {
     title = "The title of courses page";
     courses;
-    constructor(){
-        this.courses = new CourseService().getCourses();
+    constructor(courseService:CourseService){
+      this.courses = courseService.getCourses();
     }
 
-/*    courses : string[];
-    constructor(courseService: CourseService){
-        this.courses = courseService.getCourses();
+ //  courses : string[];
+ /*    constructor(courseService: CourseService){
+        
+        //  this.courses = new CourseService().getCourses()
     }*/
  }

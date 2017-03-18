@@ -12,18 +12,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var course_service_1 = require("./course.service");
 var CoursesComponent = (function () {
-    function CoursesComponent() {
+    function CoursesComponent(courseService) {
         this.title = "The title of courses page";
-        this.courses = new course_service_1.CourseService().getCourses();
+        this.courses = courseService.getCourses();
     }
     return CoursesComponent;
 }());
 CoursesComponent = __decorate([
     core_1.Component({
         selector: 'courses',
-        template: "\n        <h2>Courses</h2>\n        {{title}}\n        <input type=\"text\" autoGrow />\n        <ul>\n            <li *ngFor=\"let course of courses\">\n                {{course}}\n            </li>\n        </ul>        \n    "
+        template: "\n        <h2>Courses</h2>\n        {{title}}\n        <input type=\"text\" autoGrow />\n        <ul>\n            <li *ngFor=\"let course of courses\">\n                {{course}}\n            </li>\n        </ul>        \n    ",
+        providers: [course_service_1.CourseService]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [course_service_1.CourseService])
 ], CoursesComponent);
 exports.CoursesComponent = CoursesComponent;
 //# sourceMappingURL=courses.component.js.map
